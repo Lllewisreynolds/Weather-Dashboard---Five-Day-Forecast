@@ -32,4 +32,4 @@ function getForecast(lat, lon) {
     })
 }
 
-getCoOrdinates("Paris");
+getCoOrdinates("Fukuoka");
