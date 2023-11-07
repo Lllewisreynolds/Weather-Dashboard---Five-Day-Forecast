@@ -1,6 +1,12 @@
 // API key saved to variable for ease of access
 
-var key = "7db9885d70f5bc0e42c208559c7c142";
+var key = "7db9885d70f5bc0e42c208559c7c142a";
+
+// jQuery function used to retrieve necessary HTMl elements via their id selector
+
+var cityLocEl = $('#cityloc-input');
+var searchBtnEl = $('#search-button');
+var searchedCitiesEl = $('#searched-cities');
 
 // addeventlistener (on) - jquery - button
 
