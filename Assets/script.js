@@ -8,10 +8,6 @@ var cityLocEl = $('#cityloc-input');
 var searchBtnEl = $('#search-button');
 var searchedCitiesEl = $('#searched-cities');
 
-// addeventlistener (on) - jquery - button
-
-
-
 function getCoOrdinates(city) {
     console.log(city);
     var fetchGeoAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`;
@@ -38,4 +34,7 @@ function getForecast(lat, lon) {
     })
 }
 
-getCoOrdinates("Fukuoka");
+// getCoOrdinates("Fukuoka");
+
+// temporary function passed - will incorporate a more all-encompassing one later as smaller tasks/functions are still being created
+searchBtnEl.on("click", getCoOrdinates);
