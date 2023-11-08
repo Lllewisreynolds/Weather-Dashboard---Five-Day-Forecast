@@ -5,13 +5,13 @@ var key = "7db9885d70f5bc0e42c208559c7c142a";
 // jQuery function used to retrieve necessary HTMl elements via their id selector
 
 var cityLocEl = $('#cityloc-input');
-// var city = cityLocEl.val().trim(); - could this be passed in as a parameter?
 var searchBtnEl = $('#search-button');
 var searchedCitiesEl = $('#searched-cities');
 
 function getCoOrdinates(city) {
     console.log(city);
     var fetchGeoAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`;
+    console.log(fetchGeoAPI)
     fetch(fetchGeoAPI)
     .then(function(response){
     console.log(response);
@@ -38,7 +38,11 @@ function getForecast(lat, lon) {
 // getCoOrdinates("Fukuoka");
 
 // temporary function passed - will incorporate a more all-encompassing one later as smaller tasks/functions are still being created
-searchBtnEl.on("click", getCoOrdinates);
+searchBtnEl.on("click", function(event){
+    event.preventDefault()
+    var city = document.getElementById("cityloc-input").value
+    getCoOrdinates(city)
+ });
 
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
