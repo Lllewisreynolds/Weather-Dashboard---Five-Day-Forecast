@@ -71,6 +71,47 @@ function displayPastCities() {
 
 displayPastCities();
 
+// Will this work better?:
+
+// searchBtnEl.on("click", function(event){
+//     event.preventDefault()
+//     var city = document.getElementById("cityloc-input").value
+//     getCoOrdinates(city);
+//     var searchedCities = JSON.parse(localStorage.getItem("searchedCities"));
+//     searchedCities.push(city);
+//     localStorage.setItem("searchedCities", JSON.stringify(searchedCities));
+//     console.log(localStorage.getItem('searchedCities'));
+// });
+
+
+// function displayPastCities() {
+
+// var searchHistory = localStorage.getItem('searchedCities');
+//     if (searchHistory) {
+//         searchHistory = JSON.parse(searchHistory);
+//     } else {
+//         searchHistory = searchedCitiesHistory;
+//     }
+//     searchedCitiesHistory.push(city);
+//     localStorage.setItem("searchedCities", JSON.stringify(searchedCitiesHistory));
+//     console.log(searchedCities);
+//     searchedCitiesEl.innerHTML ='';
+
+//     for (i = 0; i < searchedCitiesHistory.length; i++) {
+
+//     var pastCityBtnEl = document.createElement("button");
+//     pastCityBtnEl.classList.add("btn", "btn-outline-secondary", "my-2");
+//     pastCityBtnEl.textContent = `${searchedCitiesHistory[i]}`;
+//     searchedCitiesEl.appendChild(pastCityBtnEl);
+
+//     }
+
+//     return;
+    
+// }
+
+// displayPastCities();
+
 
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
