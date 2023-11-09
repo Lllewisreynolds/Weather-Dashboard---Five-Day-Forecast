@@ -14,11 +14,9 @@ This has been achieved through the deployment of the following coding practices,
 
 4. Setting of the user's input to Local Storage is then implemented to save any past search history, whilst also allowing this information to be displayed within the application for the user even after further searches have been made.
 
-5. 
-
 ## Screenshot of Finalised Application - Usage
 
-![img](./Assets/)
+![img](./Assets/Weather%20Forecast%20-%20Current%20State.png)
 
 ## Link to Deployed Application
 
