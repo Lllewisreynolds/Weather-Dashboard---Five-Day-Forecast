@@ -34,18 +34,43 @@ function getForecast(lat, lon) {
     })
 }
 
-// temporary function passed - will incorporate a more all-encompassing one later as smaller tasks/functions are still being created
 searchBtnEl.on("click", function(event){
     event.preventDefault()
     var city = document.getElementById("cityloc-input").value
     getCoOrdinates(city)
-    // localStorage.setItem(, city);
-    // console.log();
-    // var searchedCitiesHistoryEl.
-    // searchedCitiesEl
+    localStorage.setItem("searchedCities", city);
+    console.log(localStorage.getItem('searchedCities'));
+    // localStorage.getItem("searchedCities"));
+    // var searchedCitiesEl = document.getElementById('searched-cities');
+    // searchedCitiesEl.innerHTML ='';
+    // var pastCityBtnEl = document.createElement("button");
+    // pastCityBtnEl.classList.add("btn", "btn-outline-secondary", "my-2");
+    // pastCityBtnEl.textContent = `${searchedCities.city}`;
+    // searchedCitiesEl.appendChild(pastCityBtnEl);
+});
 
+function displayPastCities() {
 
- });
+    var searchedCities = localStorage.getItem("searchedCities");
+    // Is the following local re-declaration necessary?
+    var searchedCitiesEl = document.getElementById('searched-cities');
+    searchedCitiesEl.innerHTML ='';
+
+    for (i = 0; i < searchedCities.length; i++) {
+
+    var pastCityBtnEl = document.createElement("button");
+    pastCityBtnEl.classList.add("btn", "btn-outline-secondary", "my-2");
+    pastCityBtnEl.textContent = `${searchedCities.city}`;
+    searchedCitiesEl.appendChild(pastCityBtnEl);
+
+    }
+
+    return;
+    
+}
+
+displayPastCities();
+
 
 // WHEN I search for a city
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
