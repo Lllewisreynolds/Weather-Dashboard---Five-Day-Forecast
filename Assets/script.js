@@ -8,6 +8,10 @@ var cityLocEl = $('#cityloc-input');
 var searchBtnEl = $('#search-button');
 var searchedCitiesEl = $('#searched-cities');
 
+// Array created to store prior city searches inputted by the user
+
+var searchedCitiesHistoryEl = [];
+
 function getCoOrdinates(city) {
     var fetchGeoAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`;
     fetch(fetchGeoAPI)
@@ -35,6 +39,12 @@ searchBtnEl.on("click", function(event){
     event.preventDefault()
     var city = document.getElementById("cityloc-input").value
     getCoOrdinates(city)
+    // localStorage.setItem(, city);
+    // console.log();
+    // var searchedCitiesHistoryEl.
+    // searchedCitiesEl
+
+
  });
 
 // WHEN I search for a city
